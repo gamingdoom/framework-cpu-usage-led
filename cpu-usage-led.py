@@ -11,7 +11,7 @@ import signal
 
 shouldExit = False
 
-# Possible values: power, left, right
+# Possible values: power, left, right. Power is the fingerprint sensor's LED.
 ledsToChange = ["power"]
 
 # Privilege escalation command to use. fw-ectool needs to be run as root.
