@@ -14,9 +14,9 @@ shouldExit = False
 # Possible values: power, left, right
 ledsToChange = ["power"]
 
-# Priviledge escalation command to use. fw-ectool needs to be run as root
-#priviligeEscalation = "sudo"
-priviligeEscalation = None
+# Privilege escalation command to use. fw-ectool needs to be run as root.
+#privilegeEscalation = "sudo"
+privilegeEscalation = None
 
 def changeColor(color, led):
     colorName = "white"
@@ -46,8 +46,8 @@ def changeColor(color, led):
     changeLed(colorName, led)
 
 def changeLed(colorName, led):
-    if priviligeEscalation:
-        subprocess.run([priviligeEscalation, "fw-ectool", "led", led, colorName])
+    if privilegeEscalation:
+        subprocess.run([privilegeEscalation, "fw-ectool", "led", led, colorName])
     else:
         subprocess.run(["fw-ectool", "led", led, colorName])
 
