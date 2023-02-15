@@ -1,0 +1,5 @@
+[Service]
+ExecStart=python /usr/bin/cpu-usage-led.py
+
+[Install]
+WantedBy=default.target
