@@ -13,10 +13,9 @@ When you have edited the script to your liking, run it. The script sets LEDs to 
 <summary>Autostart using systemd</summary>  
 On systems using systemd, the Python script can be run automatically on boot. Note that the <i>privilegeEscalation = None</i> line should remain unchanged if used as a systemd service.
 
-1. Move `cpu-usage-led.py` to `/usr/bin/` so that `/usr/bin/cpu-usage-led.py` is present.  
-2. Move `cpu-usage-led.service` to `/etc/systemd/system/` so that `/etc/systemd/system/cpu-us  
-age-led.service` is present.  
+1. Move `cpu-usage-led.py` to `/usr/local/bin/` so that `/usr/local/bin/cpu-usage-led.py` is present and run `chmod +x /usr/local/bin/cpu-usage-led.py`.  
+2. Move `cpu-usage-led.service` to `/etc/systemd/system/` so that `/etc/systemd/system/cpu-usage-led.service` is present.  
 3. Run `systemctl daemon-reload`.  
 4. Run `systemctl enable cpu-usage-led.service`.  
-	- To launch the service now, run `systemctl start cpu-usage-led.service`.  
+	- To launch the service, run `systemctl start cpu-usage-led.service`.  
 </details>
